@@ -7,10 +7,8 @@ export default function OfferFooter() {
     <footer className="bg-gray-900 border-t border-gray-800">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-700 text-white text-sm font-bold">
-              T
-            </span>
+          <div className="flex items-center gap-3">
+            <img src="/logo-icon.png" alt="Tether Solutions" className="h-9 w-auto brightness-0 invert opacity-90" />
             <div>
               <p className="text-base font-bold leading-none">
                 <span className="text-white">Tether</span>
