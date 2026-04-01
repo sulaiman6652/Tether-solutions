@@ -23,7 +23,7 @@ export default function OfferNavbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2">
-          <img src="/logo-edited.png" alt="Tether Solutions" className="h-16 w-16 object-contain -mx-2" />
+          <img src="/logo-new.png" alt="Tether Solutions" className="h-10 w-10 object-contain rounded-lg" />
           <span className="text-2xl font-bold tracking-tight">
             <span className="text-gray-900">Tether</span>
             <span className="text-blue-600"> Solutions</span>
