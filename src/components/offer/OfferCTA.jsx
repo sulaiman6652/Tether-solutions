@@ -1,19 +1,26 @@
 import { ArrowRight } from 'lucide-react'
 import { useBooking } from '../../context/BookingContext'
+import { useInView } from '../../hooks/useInView'
 
 export default function OfferCTA() {
   const { openModal } = useBooking()
+  const [ref, inView] = useInView()
 
   return (
     <section className="py-24 bg-gray-900 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-600/20 blur-3xl rounded-full" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-900/30 blur-3xl rounded-full" />
       </div>
 
-      <div className="relative max-w-3xl mx-auto px-6 text-center">
-        <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-5">
+      <div
+        ref={ref}
+        className={`reveal relative max-w-3xl mx-auto px-6 text-center ${inView ? 'in-view' : ''}`}
+      >
+        <span className="inline-flex items-center gap-2 bg-blue-900/60 border border-blue-700/40 text-blue-300 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
+          <span className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
           Take the next step
-        </p>
+        </span>
         <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
           Stop Running Your Business{' '}
           <span className="text-blue-400">The Hard Way</span>
@@ -31,7 +38,7 @@ export default function OfferCTA() {
         </button>
 
         <p className="text-gray-500 text-sm mt-5">
-          Let's build a system that actually works for your business.
+          No commitment. Just a genuine conversation about your business.
         </p>
       </div>
     </section>

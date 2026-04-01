@@ -1,5 +1,6 @@
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { useBooking } from '../../context/BookingContext'
+import { useInView } from '../../hooks/useInView'
 
 const plans = [
   {
@@ -50,14 +51,21 @@ const plans = [
 
 export default function Pricing() {
   const { openModal } = useBooking()
+  const [headerRef, headerInView] = useInView()
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-blue-700 font-semibold text-sm uppercase tracking-widest mb-3">
+    <section className="py-24 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50/40 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
+        <div
+          ref={headerRef}
+          className={`text-center max-w-2xl mx-auto mb-14 reveal ${headerInView ? 'in-view' : ''}`}
+        >
+          <span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-4">
+            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full" />
             Pricing
-          </p>
+          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
             Simple Pricing Options
           </h2>
@@ -67,14 +75,18 @@ export default function Pricing() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
-          {plans.map(({ name, price, desc, features, popular, cta }, i) => (
+          {plans.map(({ name, price, desc, features, popular, cta }, i) => {
+            const [ref, inView] = useInView()
+            return (
             <div
               key={i}
-              className={`relative rounded-2xl p-8 flex flex-col border transition-all duration-300 ${
+              ref={ref}
+              className={`reveal ${inView ? 'in-view' : ''} relative rounded-2xl p-8 flex flex-col border transition-all duration-300 ${
                 popular
                   ? 'bg-blue-700 border-blue-700 shadow-2xl md:scale-[1.02]'
-                  : 'bg-white border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1'
+                  : 'bg-white border-gray-100 shadow-card hover:shadow-card-lg hover:-translate-y-1'
               }`}
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
               {popular && (
                 <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-blue-700 text-[11px] font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
@@ -115,7 +127,8 @@ export default function Pricing() {
                 <ArrowRight size={15} />
               </button>
             </div>
-          ))}
+            )
+          })}
         </div>
 
         <p className="text-center text-gray-400 text-sm mt-10">

@@ -1,25 +1,32 @@
 import { ArrowRight } from 'lucide-react'
 import { useBooking } from '../context/BookingContext'
+import { useInView } from '../hooks/useInView'
 
 export default function CTA() {
   const { openModal } = useBooking()
+  const [ref, inView] = useInView()
 
   return (
     <section className="py-24 bg-gray-900 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/20 blur-3xl rounded-full" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-900/30 blur-3xl rounded-full" />
       </div>
 
-      <div className="relative max-w-3xl mx-auto px-6 text-center">
-        <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-5">
+      <div
+        ref={ref}
+        className={`reveal relative max-w-3xl mx-auto px-6 text-center ${inView ? 'in-view' : ''}`}
+      >
+        <span className="inline-flex items-center gap-2 bg-blue-900/60 border border-blue-700/40 text-blue-300 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
+          <span className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
           Ready to grow?
-        </p>
+        </span>
         <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
           Stop Losing Clients.{' '}
           <span className="text-blue-400">Start Automating.</span>
         </h2>
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl mx-auto">
-          Every day without a system is missed opportunities.
+          Every day without a system is a day of missed opportunities.
         </p>
 
         <button
