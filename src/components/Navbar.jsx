@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Brand */}
         <a href="/" className="flex items-center gap-2">
-          <img src="/logo-transparent1.png" alt="Tether Solutions" className="h-16 w-16 object-contain" />
+          <img src="/logo-edited.png" alt="Tether Solutions" className="h-16 w-16 object-contain -mx-2" />
           <span className="text-2xl font-bold tracking-tight">
             <span className="text-gray-900">Tether</span>
             <span className="text-blue-600"> Solutions</span>
