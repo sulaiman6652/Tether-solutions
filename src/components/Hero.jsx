@@ -1,0 +1,124 @@
+import { ArrowRight, Calendar, CheckCircle2 } from 'lucide-react'
+import { useBooking } from '../context/BookingContext'
+
+function DashboardMockup() {
+  return (
+    <div className="relative w-full max-w-sm mx-auto lg:mx-0">
+      <div className="absolute inset-0 bg-blue-600/10 blur-3xl rounded-3xl -z-10 scale-110" />
+
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-5 space-y-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-xs text-gray-400 font-medium uppercase tracking-wide">This Week</p>
+            <p className="text-2xl font-bold text-gray-900 mt-0.5">12 Bookings</p>
+          </div>
+          <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+            <span className="w-1.5 h-1.5 bg-green-500 rounded-full inline-block" />
+            +34%
+          </span>
+        </div>
+
+        <div className="flex items-end gap-1.5 h-16 pt-2">
+          {[40, 65, 45, 80, 55, 90, 70].map((h, i) => (
+            <div
+              key={i}
+              className={`flex-1 rounded-t-md transition-all ${i === 5 ? 'bg-blue-600' : 'bg-blue-100'}`}
+              style={{ height: `${h}%` }}
+            />
+          ))}
+        </div>
+        <div className="flex justify-between text-[10px] text-gray-400">
+          {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => (
+            <span key={i} className="flex-1 text-center">{d}</span>
+          ))}
+        </div>
+
+        <div className="border-t border-gray-50 pt-3 space-y-2">
+          {[
+            { name: 'Sarah M.', time: 'Today 2:00 PM', status: 'confirmed' },
+            { name: 'James T.', time: 'Tomorrow 10:30 AM', status: 'pending' },
+          ].map((b, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <div className="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 text-xs font-bold shrink-0">
+                {b.name[0]}
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold text-gray-800 truncate">{b.name}</p>
+                <p className="text-[10px] text-gray-400">{b.time}</p>
+              </div>
+              <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${b.status === 'confirmed' ? 'bg-green-50 text-green-600' : 'bg-amber-50 text-amber-600'}`}>
+                {b.status}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="absolute -bottom-4 -left-6 bg-white rounded-xl shadow-lg border border-gray-100 px-3.5 py-2.5 flex items-center gap-2.5">
+        <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center shrink-0">
+          <Calendar size={13} className="text-white" />
+        </div>
+        <div>
+          <p className="text-xs font-semibold text-gray-800">New booking!</p>
+          <p className="text-[10px] text-gray-400">Auto-confirmed via system</p>
+        </div>
+      </div>
+
+      <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg border border-gray-100 px-3.5 py-2.5">
+        <p className="text-[10px] text-gray-400 font-medium">Leads captured</p>
+        <p className="text-lg font-bold text-blue-700 mt-0.5">48 <span className="text-xs font-normal text-gray-400">this month</span></p>
+      </div>
+    </div>
+  )
+}
+
+export default function Hero() {
+  const { openModal } = useBooking()
+
+  return (
+    <section className="relative min-h-screen flex items-center bg-white pt-16 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/60 via-white to-white pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto px-6 py-20 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold px-3.5 py-1.5 rounded-full">
+              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full" />
+              Built for service businesses
+            </div>
+
+            <div className="space-y-3">
+              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold leading-[1.1] tracking-tight text-gray-900">
+                Turn Your Website Into a{' '}
+                <span className="text-blue-700">Client-Generating Machine</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-500 leading-relaxed max-w-lg">
+                I help service businesses get more bookings, automate their workflow, and save hours every week — without needing a tech team.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <button
+                onClick={openModal}
+                className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-base"
+              >
+                Book a Free Call
+                <ArrowRight size={18} />
+              </button>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+              <CheckCircle2 size={15} className="text-blue-600 shrink-0" />
+              <span>Simple systems built to help you grow faster.</span>
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <DashboardMockup />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
