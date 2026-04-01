@@ -15,13 +15,13 @@ export default function Solution() {
         </p>
 
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
           A Simple System That Works{' '}
           <span className="text-blue-700">For You 24/7</span>
         </h2>
 
         {/* Body */}
-        <p className="text-gray-500 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-gray-500 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
           I build custom systems that capture leads, turn them into bookings, and automate your business — so you can focus on what actually matters.
         </p>
 

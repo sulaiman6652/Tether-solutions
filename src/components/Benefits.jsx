@@ -41,7 +41,7 @@ export default function Benefits() {
             </p>
 
             {/* Stat row */}
-            <div className="flex gap-8 mt-10">
+            <div className="flex gap-4 sm:gap-8 mt-8 sm:mt-10">
               {[
                 { value: '3×', label: 'More leads captured' },
                 { value: '80%', label: 'Less manual admin' },

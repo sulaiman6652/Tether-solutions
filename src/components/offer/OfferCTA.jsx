@@ -14,17 +14,17 @@ export default function OfferCTA() {
         <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-5">
           Take the next step
         </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
           Stop Running Your Business{' '}
           <span className="text-blue-400">The Hard Way</span>
         </h2>
-        <p className="text-gray-400 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl mx-auto">
+        <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl mx-auto">
           If your business depends on leads, bookings, and client communication, the right system can save you time and help you grow.
         </p>
 
         <button
           onClick={openModal}
-          className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-gray-900 font-bold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 text-base"
+          className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-gray-900 font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 text-sm sm:text-base"
         >
           Book Your Free Call
           <ArrowRight size={18} />

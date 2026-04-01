@@ -31,7 +31,7 @@ const problems = [
 export default function Problem() {
   return (
     <section className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6">
         {/* Header */}
         <div className="max-w-2xl mb-14">
           <p className="text-blue-700 font-semibold text-sm uppercase tracking-widest mb-3">

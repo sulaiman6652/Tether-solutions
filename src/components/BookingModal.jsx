@@ -100,7 +100,7 @@ export default function BookingModal() {
         aria-modal="true"
         className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
       >
-        <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto pointer-events-auto animate-fade-in-up">
+        <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[92vh] overflow-y-auto pointer-events-auto animate-fade-in-up">
           {/* Close button */}
           <button
             onClick={closeModal}
@@ -129,7 +129,7 @@ export default function BookingModal() {
             </div>
           ) : (
             /* ── Form ── */
-            <div className="px-7 pt-8 pb-8">
+            <div className="px-5 sm:px-7 pt-7 sm:pt-8 pb-7 sm:pb-8">
               {/* Header */}
               <div className="mb-7 pr-6">
                 <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">

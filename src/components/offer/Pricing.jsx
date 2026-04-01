@@ -72,7 +72,7 @@ export default function Pricing() {
               key={i}
               className={`relative rounded-2xl p-8 flex flex-col border transition-all duration-300 ${
                 popular
-                  ? 'bg-blue-700 border-blue-700 shadow-2xl scale-[1.02]'
+                  ? 'bg-blue-700 border-blue-700 shadow-2xl md:scale-[1.02]'
                   : 'bg-white border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1'
               }`}
             >

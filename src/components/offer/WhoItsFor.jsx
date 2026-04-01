@@ -30,7 +30,7 @@ export default function WhoItsFor() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {clients.map(({ icon: Icon, label, desc }, i) => (
             <div
               key={i}
