@@ -102,6 +102,9 @@ export default function Hero() {
               <p className="text-base sm:text-lg text-gray-500 leading-relaxed max-w-lg">
                 I help service businesses get more bookings, automate their workflow, and save hours every week — without needing a tech team.
               </p>
+              <p className="text-xs text-gray-400 font-medium pt-1">
+                Clinics · Gyms · Real Estate · Car Rentals · Cleaning Companies · Agencies · and more
+              </p>
             </div>
 
             <button
