@@ -10,8 +10,8 @@ const benefits = [
 ]
 
 const stats = [
-  { value: '3×',    label: 'More leads captured — by design' },
-  { value: '80%',   label: 'Less manual admin — by design' },
+  { value: '3×',    label: 'Designed to capture more leads' },
+  { value: '80%',   label: 'Designed to cut manual admin' },
   { value: '24/7',  label: 'System runs without you' },
   { value: '< 30s', label: 'Automated response time' },
 ]
