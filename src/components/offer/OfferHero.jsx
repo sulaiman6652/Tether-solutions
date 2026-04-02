@@ -76,8 +76,8 @@ export default function OfferHero() {
 
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[52px] font-extrabold leading-[1.1] tracking-tight text-gray-900">
-                The Business{' '}
-                <span className="text-blue-700">Automation System</span>
+                A Done-For-You System That{' '}
+                <span className="text-blue-700">Books Clients While You Sleep</span>
               </h1>
               <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
                 A custom-built system designed to help service businesses get more bookings, automate operations, and save hours every week.
