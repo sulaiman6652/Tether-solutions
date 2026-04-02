@@ -1,13 +1,11 @@
-import { ArrowRight, Calendar, CheckCircle2, Zap } from 'lucide-react'
+import { ArrowRight, Calendar, CheckCircle2, Zap, TrendingUp, Clock } from 'lucide-react'
 import { useBooking } from '../context/BookingContext'
 
 function DashboardMockup() {
   return (
     <div className="relative w-full max-w-xs sm:max-w-sm mx-auto lg:mx-0">
-      {/* Glow under card */}
       <div className="absolute inset-0 bg-blue-500/10 blur-3xl rounded-3xl scale-110 -z-10" />
 
-      {/* Main card */}
       <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-5 space-y-4">
         <div className="flex items-center justify-between">
           <div>
@@ -19,7 +17,6 @@ function DashboardMockup() {
           </span>
         </div>
 
-        {/* Bar chart */}
         <div className="flex items-end gap-1.5 h-16 pt-2">
           {[40, 65, 45, 80, 55, 90, 70].map((h, i) => (
             <div
@@ -35,7 +32,6 @@ function DashboardMockup() {
           ))}
         </div>
 
-        {/* Bookings */}
         <div className="border-t border-gray-50 pt-3 space-y-2">
           {[
             { name: 'Sarah M.', time: 'Today 2:00 PM', status: 'confirmed' },
@@ -57,7 +53,7 @@ function DashboardMockup() {
         </div>
       </div>
 
-      {/* Floating cards */}
+      {/* Floating cards — desktop only */}
       <div className="hidden sm:flex absolute -bottom-5 -left-6 bg-white border border-gray-100 rounded-xl shadow-lg px-3 py-2 items-center gap-2">
         <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center shrink-0">
           <Calendar size={13} className="text-white" />
@@ -82,6 +78,9 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-white pt-16 overflow-hidden">
 
+      {/* Mobile-specific gradient band at top */}
+      <div className="absolute top-16 left-0 right-0 h-72 bg-gradient-to-b from-blue-50/70 to-transparent pointer-events-none lg:hidden" />
+
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-blue-50/80 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
@@ -93,54 +92,74 @@ export default function Hero() {
       <div className="absolute top-24 left-0 w-48 h-px bg-gradient-to-r from-transparent to-blue-200 pointer-events-none" />
       <div className="absolute top-24 right-0 w-48 h-px bg-gradient-to-l from-transparent to-blue-200 pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 py-12 sm:py-20 w-full">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 py-10 sm:py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Copy */}
-          <div className="space-y-6 sm:space-y-8 animate-fade-in-up">
+          <div className="space-y-6 animate-fade-in-up">
+
+            {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold px-3.5 py-1.5 rounded-full">
               <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse" />
               Built for service businesses
             </div>
 
-            <div className="space-y-3">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] font-extrabold leading-[1.1] tracking-tight text-gray-900">
+            {/* Headline — larger on mobile */}
+            <div className="space-y-4">
+              <h1 className="text-[2.6rem] leading-[1.08] sm:text-5xl lg:text-5xl xl:text-[56px] font-extrabold tracking-tight text-gray-900">
                 Get More Bookings{' '}
                 <span className="text-blue-700">on Autopilot</span>
               </h1>
               <p className="text-gray-500 text-base sm:text-lg leading-relaxed max-w-lg">
                 I help service businesses get more bookings, automate their workflow, and save hours every week — without needing a tech team.
               </p>
-              <p className="text-xs text-gray-400 font-medium tracking-wide pt-1">
+              <p className="text-xs text-gray-400 font-medium tracking-wide">
                 Clinics · Gyms · Real Estate · Car Rentals · Cleaning Companies · Agencies · and more
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={openModal}
-                className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm sm:text-base"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-7 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-base"
               >
                 Book a Free Call
                 <ArrowRight size={17} />
               </button>
               <a
                 href="/offer"
-                className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-900 font-semibold px-7 py-3.5 rounded-full border border-gray-200 hover:border-gray-400 transition-all duration-200 text-sm sm:text-base"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 font-semibold px-7 py-4 rounded-full border border-gray-200 hover:border-gray-400 transition-all duration-200 text-base"
               >
                 See the Offer
                 <Zap size={15} />
               </a>
             </div>
 
+            {/* Trust line */}
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <CheckCircle2 size={14} className="text-blue-600 shrink-0" />
               <span>No commitment. Just a genuine conversation.</span>
             </div>
+
+            {/* Mobile stats strip — hidden on desktop */}
+            <div className="grid grid-cols-3 gap-3 pt-2 lg:hidden">
+              {[
+                { icon: TrendingUp, value: '3×', label: 'More leads' },
+                { icon: Clock,      value: '<30s', label: 'Auto-reply' },
+                { icon: Calendar,   value: '24/7', label: 'Runs itself' },
+              ].map(({ icon: Icon, value, label }, i) => (
+                <div key={i} className="bg-blue-50 border border-blue-100 rounded-2xl p-3 text-center">
+                  <Icon size={16} className="text-blue-600 mx-auto mb-1" />
+                  <p className="text-blue-700 font-extrabold text-sm">{value}</p>
+                  <p className="text-gray-500 text-[10px] mt-0.5">{label}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Visual */}
-          <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
+          {/* Visual — hidden on mobile, shown on lg+ */}
+          <div className="hidden lg:flex justify-end mt-4 lg:mt-0">
             <DashboardMockup />
           </div>
 
