@@ -96,8 +96,8 @@ export default function Hero() {
 
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] font-extrabold leading-[1.1] tracking-tight text-gray-900">
-                Turn Your Website Into a{' '}
-                <span className="text-blue-700">Client-Generating Machine</span>
+                Get More Bookings{' '}
+                <span className="text-blue-700">on Autopilot</span>
               </h1>
               <p className="text-base sm:text-lg text-gray-500 leading-relaxed max-w-lg">
                 I help service businesses get more bookings, automate their workflow, and save hours every week — without needing a tech team.
