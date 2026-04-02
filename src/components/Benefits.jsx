@@ -10,10 +10,10 @@ const benefits = [
 ]
 
 const stats = [
-  { value: '3×',   label: 'More leads captured' },
-  { value: '80%',  label: 'Less manual admin' },
-  { value: '24/7', label: 'Runs automatically' },
-  { value: '< 30s', label: 'Response time' },
+  { value: '3×',    label: 'More leads captured — by design' },
+  { value: '80%',   label: 'Less manual admin — by design' },
+  { value: '24/7',  label: 'System runs without you' },
+  { value: '< 30s', label: 'Automated response time' },
 ]
 
 export default function Benefits() {
@@ -39,7 +39,7 @@ export default function Benefits() {
               What This Means For You
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-10">
-              A well-built system changes how your whole business feels to run.
+              Every system is built with these outcomes in mind — not as a promise, but as the goal.
             </p>
 
             {/* Stats grid */}

@@ -11,9 +11,9 @@ const outcomes = [
 ]
 
 const stats = [
-  { value: '3×',    label: 'More leads captured' },
-  { value: '80%',   label: 'Less manual admin' },
-  { value: '24/7',  label: 'System runs automatically' },
+  { value: '3×',    label: 'More leads captured — by design' },
+  { value: '80%',   label: 'Less manual admin — by design' },
+  { value: '24/7',  label: 'System runs without you' },
   { value: '< 30s', label: 'Automated response time' },
 ]
 
@@ -40,7 +40,7 @@ export default function Outcomes() {
               What This Helps You Do
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-10">
-              A well-built system changes how your whole business feels to run — not just one part of it.
+              Every system is built with these outcomes in mind — not as a promise, but as the goal.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
