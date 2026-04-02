@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, CheckCircle2, Zap, TrendingUp, Clock } from 'lucide-react'
+import { ArrowRight, Calendar, CheckCircle2, TrendingUp, Clock } from 'lucide-react'
 import { useBooking } from '../context/BookingContext'
 
 function DashboardMockup() {
@@ -118,23 +118,14 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={openModal}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-7 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-base"
-              >
-                Book a Free Call
-                <ArrowRight size={17} />
-              </button>
-              <a
-                href="/offer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 font-semibold px-7 py-4 rounded-full border border-gray-200 hover:border-gray-400 transition-all duration-200 text-base"
-              >
-                See the Offer
-                <Zap size={15} />
-              </a>
-            </div>
+            {/* CTA */}
+            <button
+              onClick={openModal}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-7 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-base"
+            >
+              Book a Free Call
+              <ArrowRight size={17} />
+            </button>
 
             {/* Trust line */}
             <div className="flex items-center gap-2 text-sm text-gray-400">
