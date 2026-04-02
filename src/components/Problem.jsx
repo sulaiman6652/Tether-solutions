@@ -33,18 +33,10 @@ export default function Problem() {
   const [headerRef, headerInView] = useInView()
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gray-950">
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.04]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-          backgroundSize: '48px 48px',
-        }}
-      />
+    <section className="py-24 relative overflow-hidden bg-gray-50">
+      <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
       {/* Red ambient glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-600/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-50/60 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
         {/* Header */}
@@ -52,11 +44,11 @@ export default function Problem() {
           ref={headerRef}
           className={`max-w-2xl mb-14 reveal ${headerInView ? 'in-view' : ''}`}
         >
-          <span className="inline-flex items-center gap-2 bg-red-950/60 border border-red-900/50 text-red-400 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-4">
+          <span className="inline-flex items-center gap-2 bg-red-50 border border-red-100 text-red-600 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-4">
             <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
             The Problem
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
             You're Probably Losing Clients Without Realising It
           </h2>
           <p className="text-gray-500 text-lg leading-relaxed">
@@ -75,11 +67,11 @@ export default function Problem() {
                 className={`reveal-scale ${inView ? 'in-view' : ''}`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="h-full bg-gray-900 rounded-2xl p-6 border border-red-900/30 hover:border-red-500/40 hover:shadow-[0_0_30px_rgba(239,68,68,0.08)] hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-red-950/50 text-red-400 border border-red-900/40 mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="h-full bg-white rounded-2xl p-6 border border-gray-100 shadow-card hover:border-red-100 hover:shadow-[0_0_30px_rgba(239,68,68,0.06)] hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-red-50 text-red-500 border border-red-100 mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon size={20} />
                   </div>
-                  <h3 className="text-gray-100 font-semibold text-sm leading-snug mb-2">{title}</h3>
+                  <h3 className="text-gray-900 font-semibold text-sm leading-snug mb-2">{title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{description}</p>
                 </div>
               </div>
