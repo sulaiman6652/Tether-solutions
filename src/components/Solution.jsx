@@ -2,9 +2,9 @@ import { Zap } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
 
 const pillars = [
-  { label: 'Capture', text: 'Every enquiry is captured automatically — no more missed messages.', color: 'from-blue-500 to-blue-700' },
-  { label: 'Convert', text: 'Leads become bookings through smart follow-ups and instant responses.', color: 'from-violet-500 to-violet-700' },
-  { label: 'Automate', text: 'Repetitive tasks run themselves so you can focus on delivering results.', color: 'from-sky-500 to-sky-700' },
+  { label: 'Capture', text: 'Every enquiry is captured automatically — no more missed messages.', color: 'from-blue-500 to-blue-700', topBorder: 'border-t-blue-500' },
+  { label: 'Convert', text: 'Leads become bookings through smart follow-ups and instant responses.', color: 'from-violet-500 to-violet-700', topBorder: 'border-t-violet-500' },
+  { label: 'Automate', text: 'Repetitive tasks run themselves so you can focus on delivering results.', color: 'from-sky-500 to-sky-700', topBorder: 'border-t-sky-500' },
 ]
 
 export default function Solution() {
@@ -12,17 +12,17 @@ export default function Solution() {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-50/60 rounded-full blur-3xl pointer-events-none" />
+      {/* Background accent — large radial glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-blue-50/80 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto px-5 sm:px-6 text-center">
         <div
           ref={ref}
-          className={`reveal ${inView ? 'in-view' : ''}`}
+          className={`reveal-blur ${inView ? 'in-view' : ''}`}
         >
           {/* Icon */}
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white mb-6 shadow-glow animate-float">
-            <Zap size={26} />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white mb-6 shadow-[0_0_50px_rgba(59,130,246,0.4)] animate-float">
+            <Zap size={30} />
           </div>
 
           <span className="block text-blue-700 font-semibold text-sm uppercase tracking-widest mb-4">
@@ -41,16 +41,16 @@ export default function Solution() {
 
         {/* Feature pillars */}
         <div className="grid sm:grid-cols-3 gap-5 mt-4">
-          {pillars.map(({ label, text, color }, i) => {
+          {pillars.map(({ label, text, color, topBorder }, i) => {
             const [cardRef, cardInView] = useInView()
             return (
               <div
                 key={i}
                 ref={cardRef}
-                className={`reveal ${cardInView ? 'in-view' : ''}`}
+                className={`reveal-scale ${cardInView ? 'in-view' : ''}`}
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="h-full bg-gray-50 border border-gray-100 rounded-2xl p-6 text-left hover:border-blue-100 hover:bg-white hover:shadow-card-lg hover:-translate-y-1 transition-all duration-300 group">
+                <div className={`h-full bg-white border border-gray-100 border-t-2 ${topBorder} rounded-2xl p-6 text-left hover:shadow-[0_8px_40px_rgba(59,130,246,0.12)] hover:-translate-y-2 transition-all duration-300 group`}>
                   <div className={`inline-flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br ${color} text-white text-sm font-bold mb-4 shadow-sm`}>
                     {String(i + 1).padStart(2, '0')}
                   </div>
