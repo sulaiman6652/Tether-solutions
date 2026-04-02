@@ -3,7 +3,7 @@ import { useBooking } from '../context/BookingContext'
 
 function DashboardMockup() {
   return (
-    <div className="relative w-full max-w-sm mx-auto mt-14">
+    <div className="relative w-full max-w-xs sm:max-w-sm mx-auto lg:mx-0">
       {/* Glow under card */}
       <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-3xl scale-110 -z-10" />
 
@@ -80,7 +80,7 @@ export default function Hero() {
   const { openModal } = useBooking()
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-gray-950 pt-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-gray-950 pt-16 overflow-hidden">
 
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
@@ -95,55 +95,58 @@ export default function Hero() {
       <div className="absolute bottom-24 left-0 w-32 h-px bg-gradient-to-r from-transparent to-blue-600/20 pointer-events-none" />
       <div className="absolute bottom-24 right-0 w-32 h-px bg-gradient-to-l from-transparent to-blue-600/20 pointer-events-none" />
 
-      <div className="relative w-full max-w-4xl mx-auto px-5 sm:px-6 py-16 sm:py-24 text-center">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 py-12 sm:py-20 w-full">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-blue-950/80 border border-blue-700/40 text-blue-300 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-7">
-          <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
-          Built for service businesses
+          {/* Copy */}
+          <div className="space-y-6 sm:space-y-8 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 bg-blue-950/80 border border-blue-700/40 text-blue-300 text-xs font-semibold px-3.5 py-1.5 rounded-full">
+              <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
+              Built for service businesses
+            </div>
+
+            <div className="space-y-3">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] font-extrabold leading-[1.1] tracking-tight text-white">
+                Get More Bookings{' '}
+                <span className="text-blue-400">on Autopilot</span>
+              </h1>
+              <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-lg">
+                I help service businesses get more bookings, automate their workflow, and save hours every week — without needing a tech team.
+              </p>
+              <p className="text-xs text-gray-600 font-medium tracking-wide pt-1">
+                Clinics · Gyms · Real Estate · Car Rentals · Cleaning Companies · Agencies · and more
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={openModal}
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-glow hover:-translate-y-0.5 text-sm sm:text-base"
+              >
+                Book a Free Call
+                <ArrowRight size={17} />
+              </button>
+              <a
+                href="/offer"
+                className="inline-flex items-center gap-2 text-gray-400 hover:text-white font-semibold px-7 py-3.5 rounded-full border border-gray-700 hover:border-gray-500 transition-all duration-200 text-sm sm:text-base"
+              >
+                See the Offer
+                <Zap size={15} />
+              </a>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm text-gray-600">
+              <CheckCircle2 size={14} className="text-blue-500 shrink-0" />
+              <span>No commitment. Just a genuine conversation.</span>
+            </div>
+          </div>
+
+          {/* Visual */}
+          <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
+            <DashboardMockup />
+          </div>
+
         </div>
-
-        {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[68px] font-extrabold leading-[1.05] tracking-tight text-white mb-6">
-          Get More Bookings{' '}
-          <span className="text-blue-400">on Autopilot</span>
-        </h1>
-
-        {/* Subtext */}
-        <p className="text-gray-400 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-3">
-          I help service businesses get more bookings, automate their workflow, and save hours every week — without needing a tech team.
-        </p>
-
-        {/* Industry list */}
-        <p className="text-xs text-gray-600 font-medium tracking-wide mb-10">
-          Clinics · Gyms · Real Estate · Car Rentals · Cleaning Companies · Agencies · and more
-        </p>
-
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-          <button
-            onClick={openModal}
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-glow hover:-translate-y-0.5 text-sm sm:text-base"
-          >
-            Book a Free Call
-            <ArrowRight size={17} />
-          </button>
-          <a
-            href="/offer"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white font-semibold px-7 py-3.5 rounded-full border border-gray-700 hover:border-gray-500 transition-all duration-200 text-sm sm:text-base"
-          >
-            See the Offer
-            <Zap size={15} />
-          </a>
-        </div>
-
-        <div className="flex items-center justify-center gap-2 text-sm text-gray-600 mb-2">
-          <CheckCircle2 size={14} className="text-blue-500 shrink-0" />
-          <span>No commitment. Just a genuine conversation.</span>
-        </div>
-
-        {/* Dashboard visual */}
-        <DashboardMockup />
       </div>
     </section>
   )
