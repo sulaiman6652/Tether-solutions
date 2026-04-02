@@ -4,7 +4,7 @@ const steps = [
   {
     number: '01',
     title: 'Audit',
-    text: 'We look at how your business currently gets leads, handles bookings, and manages workflow.',
+    text: 'I look at how your business currently gets leads, handles bookings, and manages workflow.',
     detail: 'Free call — no commitment',
   },
   {

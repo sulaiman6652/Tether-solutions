@@ -1,7 +1,7 @@
 import { useInView } from '../hooks/useInView'
 
 const steps = [
-  { number: '01', title: 'We Understand Your Business', text: "Quick call to identify where you're losing time and clients.", detail: 'Free call' },
+  { number: '01', title: 'I Learn Your Business',        text: "Quick call to understand where you're losing time and clients.", detail: 'Free call' },
   { number: '02', title: 'I Build Your System',          text: 'Everything is set up for you, tailored to your workflow.',          detail: '1–2 weeks' },
   { number: '03', title: 'You Get Results',              text: 'More bookings, less admin, smoother operations.',                    detail: 'Full handover' },
 ]
