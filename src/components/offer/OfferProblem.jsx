@@ -2,12 +2,12 @@ import { AlertCircle, Clock, CalendarX, Hourglass, UserX, FolderOpen } from 'luc
 import { useInView } from '../../hooks/useInView'
 
 const problems = [
-  { icon: AlertCircle, title: 'Leads come in but never get tracked',       desc: 'Enquiries fall through the gaps and you have no clear view of your pipeline.' },
-  { icon: Clock,       title: 'Enquiries are missed or replied to too late', desc: 'Slow responses mean lost clients — they move on before you even follow up.' },
-  { icon: CalendarX,   title: 'Bookings require too much manual effort',    desc: 'Back-and-forth scheduling wastes your time and frustrates potential clients.' },
-  { icon: Hourglass,   title: 'Too much time wasted on admin',              desc: "You're spending hours on tasks that should be running automatically." },
-  { icon: UserX,       title: 'Clients have a poor experience',             desc: 'Disorganised processes create confusion and reduce trust in your business.' },
-  { icon: FolderOpen,  title: 'Everything is scattered across tools',       desc: 'Messages, spreadsheets, notes — nothing is in one place and nothing works together.' },
+  { icon: AlertCircle, title: 'That lead who enquired Saturday night?',          desc: "By Monday morning they've already booked with your competitor. You never even saw the message." },
+  { icon: Clock,       title: 'Every hour without a response costs you clients', desc: "Speed wins. If you're not replying in minutes, someone else is. Manually checking messages doesn't scale." },
+  { icon: CalendarX,   title: 'You lose clients before they even book',          desc: "Too many steps to book, no instant confirmation, no follow-up — and they just go quiet." },
+  { icon: Hourglass,   title: 'You did admin again instead of growing',          desc: "That hour you spent copy-pasting follow-ups and updating spreadsheets? That's an hour you didn't spend on the work that actually pays." },
+  { icon: UserX,       title: 'Your first impression is costing you trust',      desc: "Slow replies, no confirmation, no structure. Clients notice — and it makes you look less professional than you are." },
+  { icon: FolderOpen,  title: 'You have no idea what happened to that lead',     desc: "You remember talking to someone last week. Were they a yes? Did you follow up? It's all lost in your inbox." },
 ]
 
 export default function OfferProblem() {
@@ -27,10 +27,10 @@ export default function OfferProblem() {
             The Problem
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-            Why Most Businesses Stay Stuck
+            What's Actually Costing You Money Right Now
           </h2>
           <p className="text-gray-500 text-lg leading-relaxed">
-            Without the right systems in place, growth becomes messy, slow, and frustrating.
+            Most of it is invisible — until you add it up.
           </p>
         </div>
 
