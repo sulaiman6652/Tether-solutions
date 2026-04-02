@@ -3,6 +3,7 @@ import OfferHero from '../components/offer/OfferHero'
 import WhoItsFor from '../components/offer/WhoItsFor'
 import OfferProblem from '../components/offer/OfferProblem'
 import CoreOffer from '../components/offer/CoreOffer'
+import MidCTA from '../components/offer/MidCTA'
 import Outcomes from '../components/offer/Outcomes'
 import OfferProcess from '../components/offer/OfferProcess'
 import Pricing from '../components/offer/Pricing'
@@ -19,6 +20,7 @@ export default function OfferPage() {
         <WhoItsFor />
         <OfferProblem />
         <CoreOffer />
+        <MidCTA />
         <Outcomes />
         <OfferProcess />
         <Pricing />
