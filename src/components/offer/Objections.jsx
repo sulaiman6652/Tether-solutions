@@ -38,10 +38,10 @@ export default function Objections() {
             Common Questions
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-            Why This Makes Sense
+            Common Questions
           </h2>
           <p className="text-gray-500 text-lg">
-            Here are the most common concerns — and why they should not stop you.
+            Everything you need to know before getting started.
           </p>
         </div>
 
