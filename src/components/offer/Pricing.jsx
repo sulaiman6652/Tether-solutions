@@ -5,7 +5,7 @@ import { useInView } from '../../hooks/useInView'
 const plans = [
   {
     name: 'Starter System',
-    price: 'From 1,500 AED',
+    price: 'From $400',
     desc: 'Ideal for businesses that need a clean landing page and basic lead capture setup.',
     features: [
       'High-converting landing page',
@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: 'Growth System',
-    price: 'From 5,000 AED',
+    price: 'From $1,350',
     desc: 'Best for businesses that want bookings, automation, and a stronger backend system.',
     features: [
       'Everything in Starter',
