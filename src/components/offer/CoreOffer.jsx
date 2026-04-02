@@ -2,12 +2,12 @@ import { Layout, CalendarCheck, Users, MessageSquare, Wrench, LayoutDashboard } 
 import { useInView } from '../../hooks/useInView'
 
 const items = [
-  { icon: Layout,          title: 'High-Converting Landing Page', desc: 'A clean, focused page designed to turn visitors into real enquiries or bookings.',               color: 'bg-blue-50 text-blue-700',     tag: 'Included' },
-  { icon: CalendarCheck,   title: 'Booking System Setup',         desc: 'Make it easy for clients to book without the back-and-forth.',                                   color: 'bg-violet-50 text-violet-700', tag: 'Included' },
-  { icon: Users,           title: 'Lead Capture + CRM Flow',      desc: 'Track leads properly and keep everything organised in one place.',                               color: 'bg-sky-50 text-sky-700',       tag: 'Included' },
-  { icon: MessageSquare,   title: 'Automated Follow-Ups',         desc: 'Send quick responses and reminders through email or WhatsApp.',                                  color: 'bg-green-50 text-green-700',   tag: 'Included' },
-  { icon: Wrench,          title: 'Custom Internal Tools',        desc: 'Replace messy spreadsheets and manual workflows with something built around your business.',     color: 'bg-orange-50 text-orange-700', tag: 'Add-on' },
-  { icon: LayoutDashboard, title: 'Client Portal Options',        desc: 'Give your clients a smoother, more professional experience when needed.',                        color: 'bg-pink-50 text-pink-700',     tag: 'Add-on' },
+  { icon: Layout,          title: 'High-Converting Landing Page', desc: 'A clean, focused page designed to turn visitors into real enquiries or bookings. Built specifically for your service, mobile-optimised, and designed to load fast and convert.',               color: 'bg-blue-50 text-blue-700',     tag: 'Included' },
+  { icon: CalendarCheck,   title: 'Booking System Setup',         desc: 'Clients pick a time and book instantly — no back-and-forth, no missed messages. Syncs with your calendar and sends automatic confirmations so nothing falls through.',                        color: 'bg-violet-50 text-violet-700', tag: 'Included' },
+  { icon: Users,           title: 'Lead Capture + CRM Flow',      desc: 'Every enquiry is captured and organised automatically. You get a clear view of your pipeline — who came in, when, and what stage they\'re at — so no lead gets forgotten.',                   color: 'bg-sky-50 text-sky-700',       tag: 'Included' },
+  { icon: MessageSquare,   title: 'Automated Follow-Ups',         desc: 'The moment a lead comes in, they get a response — via email or WhatsApp. Follow-up reminders go out automatically so you stay front of mind without lifting a finger.',                       color: 'bg-green-50 text-green-700',   tag: 'Included' },
+  { icon: Wrench,          title: 'Custom Internal Tools',        desc: 'Replace the spreadsheets, sticky notes, and manual processes with something built around how your business actually runs. Dashboards, trackers, or workflows — whatever you need.',            color: 'bg-orange-50 text-orange-700', tag: 'Add-on' },
+  { icon: LayoutDashboard, title: 'Client Portal Options',        desc: 'Give clients a dedicated space to view their bookings, documents, or updates. A simple but professional touch that sets you apart and reduces back-and-forth communication.',                  color: 'bg-pink-50 text-pink-700',     tag: 'Add-on' },
 ]
 
 export default function CoreOffer() {
