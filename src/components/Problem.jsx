@@ -4,28 +4,28 @@ import { useInView } from '../hooks/useInView'
 const problems = [
   {
     icon: BellOff,
-    title: 'Missed enquiries that never get followed up',
-    description: "Potential clients contact you and hear nothing back — they move on to a competitor.",
+    title: 'A client messaged you 3 days ago. You just saw it.',
+    description: "They already booked someone else. Every hour you don't respond is a lead walking out the door.",
   },
   {
     icon: Clock,
-    title: 'Slow responses that lose potential clients',
-    description: 'By the time you reply, the lead has gone cold. Speed is everything.',
+    title: "You're replying to enquiries manually — at 11pm.",
+    description: "Copy-paste the same message, check the calendar, send the link. Every. Single. Time.",
   },
   {
     icon: CalendarX,
-    title: 'Manual booking processes that waste time',
-    description: "Back-and-forth messages just to schedule a call. It's exhausting and inefficient.",
+    title: '6 messages back and forth just to book one call.',
+    description: '"What time works for you?" "How about Thursday?" "Actually can we do Friday?" — there has to be a better way.',
   },
   {
     icon: LayoutList,
-    title: 'No clear system to track leads or customers',
-    description: 'Leads scattered across emails, texts, and notes. Nothing is organised.',
+    title: "You have leads in your inbox, WhatsApp, and notes app.",
+    description: "None of them are connected. Someone fell through the cracks this week and you probably don't even know it.",
   },
   {
     icon: TrendingDown,
-    title: 'Too much admin, not enough growth',
-    description: "You're spending time on tasks that should be automated — not on growing your business.",
+    title: "You're too busy doing admin to actually grow.",
+    description: "The business needs your attention but you're stuck chasing follow-ups and updating spreadsheets.",
   },
 ]
 
