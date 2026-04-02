@@ -15,7 +15,7 @@ const plans = [
       'Mobile-responsive design',
     ],
     popular: false,
-    cta: 'Get Started',
+    cta: 'Book a Free Call',
   },
   {
     name: 'Growth System',
