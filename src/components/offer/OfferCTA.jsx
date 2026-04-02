@@ -22,8 +22,8 @@ export default function OfferCTA() {
           Take the next step
         </span>
         <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
-          Stop Running Your Business{' '}
-          <span className="text-blue-400">The Hard Way</span>
+          Ready to Stop{' '}
+          <span className="text-blue-400">Losing Leads?</span>
         </h2>
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl mx-auto">
           If your business depends on leads, bookings, and client communication, the right system can save you time and help you grow.
